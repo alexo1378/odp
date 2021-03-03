@@ -1,3 +1,0 @@
-﻿  Observer.cpp
-D:\git\odp\Observer.cpp(18,33): warning C4553: '==': result of expression not used; did you intend '='?
-  odp.vcxproj -> D:\git\odp\Debug\odp.exe
