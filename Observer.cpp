@@ -1,11 +1,7 @@
-#include <iostream>
 #include "Observer.h"
 
 void Subject::AddObserver(Observer* observer)
 {
-
-
-
 	for (int i = 0; i < observerCount; i++)
 	{
 		if (Observers[i] == observer)
@@ -17,7 +13,6 @@ void Subject::AddObserver(Observer* observer)
 		observerCount++;
 		Observers[observerCount - 1] = observer;
 	}
-
 }
 void Subject::RemoveObserver(Observer* observer)
 {
@@ -36,5 +31,3 @@ void Subject::Notify()
 	for (int i{}; i < observerCount; i++)
 		Observers[i]->Update();
 }
-
-
