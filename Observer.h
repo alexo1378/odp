@@ -14,14 +14,14 @@ public:
 
 
 
-	Subject() : observerQuantity(0) 
+	Subject() : observerCount(0) 
 	{ 
 		for (int i = 0; i < SIZE; i++) 
 			Observers[i] = nullptr; 
 	}
 private:
 	Observer* Observers[SIZE]; // array of pointers
-	int observerQuantity;
+	int observerCount;
 
 };
 
