@@ -1,11 +1,7 @@
-#include <iostream>
 #include "Observer.h"
 
 void Subject::AddObserver(Observer* observer)
 {
-
-	// replace with isObserverDuplicate function
-
 	for (int i = 0; i < observerCount; i++)
 	{
 		if (Observers[i] == observer)
@@ -17,7 +13,6 @@ void Subject::AddObserver(Observer* observer)
 		observerCount++;
 		Observers[observerCount - 1] = observer;
 	}
-
 }
 void Subject::RemoveObserver(Observer* observer)
 {
@@ -31,18 +26,8 @@ void Subject::RemoveObserver(Observer* observer)
 		}
 }
 
-
 void Subject::Notify()
 {
-	// loop through 
-	for (int i; i < observerCount; i++)
+	for (int i{}; i < observerCount; i++)
 		Observers[i]->Update();
-
-
-}
-
-int main()
-{
-	std::cout << "line";
-	return 0;
 }
