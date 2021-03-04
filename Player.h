@@ -4,6 +4,7 @@
 class Player : public Subject
 {
 public:
+	Player(int life) : totalHealth(life), currentHealth(totalHealth) {};
 	void Hit();
 	void PickUpHealth();
 	int GetTotalHealth() const { return totalHealth; }
