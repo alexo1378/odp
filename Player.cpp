@@ -17,5 +17,6 @@ void Player::PickUpHealth()
 	if (currentHealth < totalHealth)
 		currentHealth++;
 	
+	
 	Notify();
 }

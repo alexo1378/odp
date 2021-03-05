@@ -19,16 +19,17 @@ public:
 	void RemoveObserver(Observer* observer);
 	void Notify();
 
-	
+private: // private means, can only be accessed by the functions above
+	Observer *Observers[SIZE]; // declare array of pointers, can only hold pointers to Observer data type.
+	int observerCount;
+
 protected:
 	Subject() : observerCount(0)
 	{
 		for (int i = 0; i < SIZE; i++)
-			Observers[i] = nullptr;
+			Observers[i] = nullptr; // this is just assigning null ptrs to our array
 	}
-private:
-	Observer* Observers[SIZE]; // array of pointers
-	int observerCount;
+
 
 };
 

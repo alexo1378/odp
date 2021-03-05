@@ -22,9 +22,33 @@ void GameSystem::Update()
 	}
 }
 
-int main(int argc, char* argv[])
+class ArrayMaker 
 {
 
+
+public:
+	// declare a array of pointers
+	int *array[5];
+
+	ArrayMaker()
+	{
+		// make pointers in this array, nulls
+		for (int i = 0; i < 5; i++)
+			array[i] = nullptr;
+	}
+
+
+
+};
+
+class ArrayDerived : public ArrayMaker
+{
+
+};
+
+int main(int argc, char* argv[])
+{
+	/*
 	// create a observable subject
 	Player* player = new Player(4);
 
@@ -32,8 +56,15 @@ int main(int argc, char* argv[])
 	GUISystem guiSystem(player);
 	GameSystem game(player);
 	SoundSystem sound(player);
+	*/
+
+	ArrayMaker arrayMaker;
+	arrayMaker.array;
+	std::cin.get();
+	
 
 
+	/*
 	do
 	{
 		char c;
@@ -57,6 +88,6 @@ int main(int argc, char* argv[])
 	} while (std::cin.get(), game.isOver() == false);
 
 
-
+	*/
 	return 0;
 }
