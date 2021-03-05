@@ -28,6 +28,6 @@ void Subject::RemoveObserver(Observer* observer)
 
 void Subject::Notify()
 {
-	for (int i{}; i < observerCount; i++)
+	for (int i = 0; i < observerCount; i++)
 		Observers[i]->Update();
 }
