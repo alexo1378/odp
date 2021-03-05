@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "Game.h"
 #include "GUI.h"
+#include "Sound.h"
 #include <iostream>
 
 
@@ -30,6 +31,8 @@ int main(int argc, char* argv[])
 	// create observers and register with subject
 	GUISystem guiSystem(player);
 	GameSystem game(player);
+	SoundSystem sound(player);
+
 
 	do
 	{
